@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.medicallapp">
+
+    <!-- Add INTERNET permission -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Add RECEIVE_BOOT_COMPLETED permission -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- Add VIBRATE permission -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Add WAKE_LOCK permission -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- Add SET_ALARM permission -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <application
+        android:label="SocioMedicoApp"
+        android:icon="@mipmap/ic_launcher"
+        tools:replace="android:label">
+
+        <!-- Add metadata for local notifications -->
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+        
+        <activity
+       
+            android:name=".MainActivity"
+             android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Add any necessary intent filters or other attributes here -->
+        </activity>
+        <!-- Add other components like services, receivers, etc., if any -->
+    </application>
+</manifest>
